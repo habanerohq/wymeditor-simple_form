@@ -24,7 +24,7 @@ javascript file of your choosing (usually `application.js`, after the
 
 Render a form with a WYMeditor-enabled `textarea`:
 
-    <%=  simple_form_for(@comment) do |f| %>
+    <%= simple_form_for(@comment) do |f| %>
       <%= f.input :message, :as => :wymeditor %>
       <%= f.button :submit %>
     <% end %>

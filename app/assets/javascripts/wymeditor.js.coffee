@@ -2,4 +2,6 @@
 #= require_self
 
 $ ->
-  $('textarea.wymeditor').wymeditor()
+  $(':input.wymeditor').wymeditor
+    updateSelector: 'form:has(:input.wymeditor)'
+    updateEvent: 'submit'
