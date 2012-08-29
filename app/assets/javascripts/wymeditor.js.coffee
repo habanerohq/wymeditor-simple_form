@@ -1,4 +1,4 @@
-#= require jquery.wymeditor.min.js
+#= require jquery.wymeditor.js
 #= require_self
 
 $ ->
