@@ -29,6 +29,15 @@ Render a form with a WYMeditor-enabled `textarea`:
       <%= f.button :submit %>
     <% end %>
 
+### Heroku
+
+The Heroku requirement to have `config.assets.initialize_on_precompile = false`
+prevents this gem from flagging necessary WYMEditor assets for precompile -
+you need to add these manually to `config/environments/production.rb`:
+
+    config.assets.precompile += %w( wymeditor/* wymeditor/**/* )
+
+
 ## Todo
 
 * Enable configuration of the WYMeditor javascript
@@ -45,4 +54,4 @@ and GPL licenses.
 
 ## License
 
-MIT License. Copyright (c) 2012 Habanero Software http://habanerohq.com 
+MIT License. Copyright (c) 2012 Habanero Software http://habanerohq.com
